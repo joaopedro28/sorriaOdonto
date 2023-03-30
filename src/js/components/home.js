@@ -1,6 +1,4 @@
-import Swiper, { Navigation, Pagination } from "swiper"
 
-Swiper.use([Navigation, Pagination]);
 
 const Home = {
   setIconsSwiper: () => {
@@ -8,7 +6,7 @@ const Home = {
       // Optional parameters
       direction: 'vertical',
       loop: true,
-
+      direction:'horizontal',
       // If we need pagination
       pagination: {
         el: '.swiper-pagination',
