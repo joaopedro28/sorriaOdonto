@@ -5,7 +5,7 @@ const minify = require('gulp-clean-css');
 const rename = require('gulp-rename');
 
 async function compilescss () {
-    gulp.src('./src/scss/main.scss')
+    gulp.src('./src/scss/*.scss','./src/scss/**/*.scss')
         .pipe(sass())
         .pipe(prefix())
         .pipe(minify())
