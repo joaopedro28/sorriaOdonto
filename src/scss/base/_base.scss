@@ -49,7 +49,8 @@ img {
 }
 
 section.section {
-    padding: 2rem 0 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
 }
 
 .flex {
@@ -124,7 +125,7 @@ section.section {
     margin-bottom: 20px;
     text-transform: none;
     margin-top: 0;
-    color: $color-accent;
+    color: $color-text;
     text-align: center;
 
     @include media("xs") {
@@ -137,7 +138,7 @@ section.section {
     font-size: 24px;
     line-height: 1.6;
     margin: 22px auto;
-    color: $color-accent;
+    color: $color-text;
 }
 
 .btn {
