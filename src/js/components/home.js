@@ -99,18 +99,22 @@ const Home = {
   },
 
   animateElements: () => {
-    const element = document.querySelector('.animate-el');
-
-    function animateOnScroll() {
-      const elementPosition = element.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-
-      if (elementPosition < windowHeight / 1.5) {
-        element.classList.add('animate');
-      }
+    function handleScrollAnimation() {
+      const elements = document.querySelectorAll('.animate-el');
+    
+      elements.forEach((element) => {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementBottom = element.getBoundingClientRect().bottom;
+    
+        if (elementTop < window.innerHeight && elementBottom > 0) {
+          element.classList.add('animate');
+        } else {
+          element.classList.remove('animate');
+        }
+      });
     }
-
-    window.addEventListener('scroll', animateOnScroll);
+    
+    window.addEventListener('scroll', handleScrollAnimation);
   },
 
   init: function () {
