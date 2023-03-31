@@ -9,10 +9,10 @@
         filter: blur(3px);
         -webkit-filter: blur(3px);
         height: 100%;
-        background-position: contain;
+        background-position: 20%;
         background-repeat: no-repeat;
-        background-size: 100%;
-
+        background-size: 200% 100%;
+    
 
         @include media('sm') {
             background-position: 60% 35%;
@@ -36,7 +36,7 @@
         align-items: center;
         justify-content: space-around;
         flex-direction: column;
-        min-height: 100vh;
+        height: 100vh;
 
         @include media('sm') {
             flex-direction: row;
@@ -54,6 +54,7 @@
             h2 {
                 font-size: $font-size-title;
                 line-height: 1.6;
+                padding: 40px 0 0;
             }
 
             p {

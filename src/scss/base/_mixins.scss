@@ -49,19 +49,24 @@
 
 %btn {
   font-size: 21px;
-  font-weight: 500;
-  color: $black;
+  font-weight: 700;
+  color: $color-text;
   background-color: #FFF;
   border-style: solid;
   border-width: 0 0 0 0;
   border-color: #FFF;
   border-radius: 12px 12px 12px 12px;
-  box-shadow: 0 0 18px 0 #3d515b;
+  box-shadow: 0 0 14px 0 #3d515b;
   padding: 20px 25px 20px 25px;
   width: fit-content;
-
+  transition: box-shadow 0.5s ease-in;
+  svg {
+    margin-bottom: -4px;
+  }
   &:hover {
-    transform: scale(.9);
+    transition: box-shadow 0.5s ease-out;
+    box-shadow: 0 0 28px 0 $color-text;
+
   }
 }
 
